@@ -1,2 +1,7 @@
 # daily-coding-problems
-a coding problem a day keeps the bugs away
+A coding problem a day keeps the bugs away
+
+This is an attempt at solving in Java the problems distributed by https://www.dailycodingproblem.com/
+
+This is my own work and the solutions proposed here might be inefficient or plain buggy ! D.Y.O.R
+
