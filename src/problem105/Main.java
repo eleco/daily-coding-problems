@@ -23,7 +23,7 @@ class Debounce {
 
     private final ScheduledExecutorService executorService = newSingleThreadScheduledExecutor();
     private final int wait;
-    private boolean debouncing;
+    private volatile boolean debouncing;
 
     Debounce(int wait) {
         this.wait = wait;
