@@ -12,6 +12,10 @@ public class Main {
            2   3
               / \
              4   5
+
+
+   Approach:
+   breadth-first traverse of the tree
    */
 
 

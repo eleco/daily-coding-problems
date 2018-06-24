@@ -8,6 +8,16 @@ public class Main {
     //Given a string and a set of characters, return the shortest substring containing all the characters in the set.
     //For example, given the string "figehaeci" and the set of characters {a, e, i}, you should return "aeci".
 
+    //Approach
+    //1. create and populate a map of characters to occurrences, for the pattern searched for 'histoPattern'
+    //
+    //2. iterate over the input string and for each character in the string:
+    //  - add to another map of characters to occurences 'histoInput'
+    //  -until we reach a point where all the characters in the pattern searched have been populated in 'histoInput'
+    //  - at which point we remove all expendable characters from the start of the string i.e characters not in pattern, or in pattern but in too high a number
+
+
+
     public static void main(String[] args) {
         System.out.println(shortestSubstring("figehaeci", "aei"));
     }

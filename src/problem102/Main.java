@@ -10,6 +10,10 @@ public class Main {
         // Given a list of integers and a number K, return which contiguous elements of the list sum to K.
         // For example, if the list is [1, 2, 3, 4, 5] and K is 9, then it should return [2, 3, 4].
 
+        //Approach
+        //- brute force; for each element of the array, add to all other elements until sum is K
+        //- optimized: add each element of the array to the sum, is sum exceeds K then remove the earliest added element from the sum
+
         System.out.println(window_brute(new int[]{1, 2, 3, 4, 5}, 9));
         System.out.println(window_optimized(new int[]{1, 2, 3, 4, 5}, 9));
     }

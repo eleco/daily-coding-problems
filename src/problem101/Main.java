@@ -6,6 +6,10 @@ public class Main {
         //Given an even number (greater than 2), return two prime numbers whose sum will be equal to the given number.
         //  A solution will always exist. See Goldbach’s conjecture.
 
+        //Approach
+        //calculate all primes between 0 and the given number,
+        //then iterate on all 2 numbers which sum is the given number, stopping when these 2 numbers are both prime
+
         int[] r= two_primes(34);
         System.out.println(r[0] + " " + r[1]);
 
