@@ -1,8 +1,6 @@
-package problem95;
-
 import java.util.Arrays;
 
-public class Main {
+public class Q95NextGreaterPermutation {
     public static void main(String[] args) {
         /*
         Given a number represented by a list of digits, find the next greater permutation of a number, in terms of lexicographic ordering.
@@ -61,8 +59,7 @@ public class Main {
 
 
         //Reverse the sequence from a[k + 1] up to and including the final element a[n].
-        for(int i = k+1; i < a.length / 2; i++)
-        {
+        for (int i = k + 1; i < a.length / 2; i++) {
             int temp = a[i];
             a[i] = a[a.length - i - 1];
             a[a.length - i - 1] = temp;

@@ -1,8 +1,7 @@
-package problem99;
+import java.util.HashSet;
+import java.util.Set;
 
-import java.util.*;
-
-public class Main {
+public class Q99LongestConsecutiveSequence {
 
 
     public static void main(String[] args) {

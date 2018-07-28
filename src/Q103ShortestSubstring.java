@@ -1,9 +1,7 @@
-package problem103;
-
 import java.util.HashMap;
 import java.util.Map;
 
-public class Main {
+public class Q103ShortestSubstring {
 
     //Given a string and a set of characters, return the shortest substring containing all the characters in the set.
     //For example, given the string "figehaeci" and the set of characters {a, e, i}, you should return "aeci".
@@ -15,7 +13,6 @@ public class Main {
     //  - add to another map of characters to occurences 'histoInput'
     //  -until we reach a point where all the characters in the pattern searched have been populated in 'histoInput'
     //  - at which point we remove all expendable characters from the start of the string i.e characters not in pattern, or in pattern but in too high a number
-
 
 
     public static void main(String[] args) {

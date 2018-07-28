@@ -1,10 +1,8 @@
-package problem102;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Main {
+public class Q102ContinuousElementsSum {
 
     public static void main(String[] args) {
         // Given a list of integers and a number K, return which contiguous elements of the list sum to K.

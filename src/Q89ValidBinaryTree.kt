@@ -1,7 +1,3 @@
-package problem89
-
-import problem93.BinaryTree
-
 //Determine whether a tree is a valid binary search tree.
 //
 //A binary search tree is a tree with two children, left and right,
@@ -9,25 +5,22 @@ import problem93.BinaryTree
 // and the key in the right child must be greater than or equal to the root.
 
 
-object Main {
+object Q89ValidBinaryTree {
     @JvmStatic
     fun main(args: Array<String>) {
         println(isBst(buildSampleTree(), Int.MIN_VALUE, Int.MAX_VALUE))
 
     }
 
-    fun isBst(node:BinaryTree<Int>?, min:Int, max:Int) : Boolean {
-        if (node==null){
+    fun isBst(node: BinaryTree<Int>?, min: Int, max: Int): Boolean {
+        if (node == null) {
             return true;
         }
 
         return isBst(node.left, min, node.data)
-        && isBst(node.right, node.data, max)
-        && node.data > min
-        && node.data <max
-
-
-
+                && isBst(node.right, node.data, max)
+                && node.data > min
+                && node.data < max
     }
 
     fun buildSampleTree(): BinaryTree<Int> {
@@ -51,10 +44,11 @@ object Main {
 
         return a
     }
-}
 
 
-class BinaryTree<T>(val data: T) {
-    var left: BinaryTree<T>? = null
-    var right: BinaryTree<T>? = null
+    class BinaryTree<T>(val data: T) {
+        var left: BinaryTree<T>? = null
+        var right: BinaryTree<T>? = null
+    }
 }
+

@@ -1,11 +1,9 @@
-package problem98;
-
 import javafx.util.Pair;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class Q98FindWordOn2dBoard {
 
 
     public static void main(String args[]) {

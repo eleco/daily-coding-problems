@@ -1,7 +1,5 @@
-package problem93
+object Q93LargetSubtree {
 
-
-object Main {
     @JvmStatic
     fun main(args: Array<String>) {
         // Given a tree, find the largest tree/subtree that is a BST.
@@ -68,10 +66,11 @@ object Main {
 
         return a
     }
+
+    class BinaryTree<T>(val data: T) {
+        var left: BinaryTree<T>? = null
+        var right: BinaryTree<T>? = null
+    }
 }
 
 
-class BinaryTree<T>(val data: T) {
-    var left: BinaryTree<T>? = null
-    var right: BinaryTree<T>? = null
-}

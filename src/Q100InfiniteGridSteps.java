@@ -1,6 +1,4 @@
-package problem100;
-
-public class Main {
+public class Q100InfiniteGridSteps {
 
     public static void main(String[] args) {
         /*You are in an infinite 2D grid where you can move in any of the 8 directions:
@@ -26,16 +24,16 @@ public class Main {
         //Approach
         //iterate over the sequence of points. for each point calculate the distance from the prevous and add to number of steps.
 
-        System.out.println(steps(new int[][]{{0,0},{1,1},{1,2}}));
+        System.out.println(steps(new int[][]{{0, 0}, {1, 1}, {1, 2}}));
 
     }
 
 
-    private static int steps (int[][]a) {
+    private static int steps(int[][] a) {
 
-        int ox=0;
-        int oy=0;
-        int steps =0;
+        int ox = 0;
+        int oy = 0;
+        int steps = 0;
 
         for (int[] anA : a) {
 

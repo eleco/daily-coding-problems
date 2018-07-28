@@ -1,4 +1,4 @@
-object Main {
+object Q94TreeMaximumPathSum {
 
 
     var max = 0;
