@@ -1,10 +1,10 @@
-import java.util.HashSet;
-import java.util.Set;
+import java.util.HashSet
 
-public class Q99LongestConsecutiveSequence {
+object Q99LongestConsecutiveSequence {
 
 
-    public static void main(String[] args) {
+    @JvmStatic
+    fun main(args: Array<String>) {
         // Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
         // For example, given [100, 4, 200, 1, 3, 2], the longest consecutive element sequence is [1, 2, 3, 4]. Return its length: 4.
         // Your algorithm should run in O(n) complexity.
@@ -15,31 +15,32 @@ public class Q99LongestConsecutiveSequence {
         //- iterate on the set, when at the start of a sequence:
         //          - keep looking for successive numbers in that sequence, updating count and max count in the process.
 
-        System.out.println(longest_consecutive_seq(new int[]{100, 4, 200, 1, 3, 2}));
+        println(longest_consecutive_seq(intArrayOf(100, 4, 200, 1, 3, 2)))
     }
 
 
-    static int longest_consecutive_seq(int[] a) {
+    internal fun longest_consecutive_seq(a: IntArray): Int {
 
-        Set<Integer> s = new HashSet<Integer>();
-        for (int i = 0; i < a.length; i++) s.add(a[i]);
+        val s = HashSet<Int>()
+        for (i in a.indices) s.add(a[i])
 
-        int max = 0;
-        for (Integer i : s) {
-            int count = 1;
+        var max = 0
+        for (i in s) {
+            var count = 1
             if (!s.contains(i - 1)) {
-                int j = i + 1;
+                var j = i + 1
                 while (true) {
                     if (s.contains(j)) {
-                        count++;
-                        j++;
-                        if (count > max) max = count;
-                    } else break;
+                        count++
+                        j++
+                        if (count > max) max = count
+                    } else
+                        break
 
                 }
             }
 
         }
-        return max;
+        return max
     }
 }

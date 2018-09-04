@@ -1,6 +1,7 @@
-public class Q100InfiniteGridSteps {
+object Q100InfiniteGridSteps {
 
-    public static void main(String[] args) {
+    @JvmStatic
+    fun main(args: Array<String>) {
         /*You are in an infinite 2D grid where you can move in any of the 8 directions:
 
         (x,y) to
@@ -24,31 +25,31 @@ public class Q100InfiniteGridSteps {
         //Approach
         //iterate over the sequence of points. for each point calculate the distance from the prevous and add to number of steps.
 
-        System.out.println(steps(new int[][]{{0, 0}, {1, 1}, {1, 2}}));
+        println(steps(arrayOf(intArrayOf(0, 0), intArrayOf(1, 1), intArrayOf(1, 2))))
 
     }
 
 
-    private static int steps(int[][] a) {
+    private fun steps(a: Array<IntArray>): Int {
 
-        int ox = 0;
-        int oy = 0;
-        int steps = 0;
+        var ox = 0
+        var oy = 0
+        var steps = 0
 
-        for (int[] anA : a) {
+        for (anA in a) {
 
-            int px = anA[0];
-            int py = anA[1];
+            val px = anA[0]
+            val py = anA[1]
 
-            int dy = Math.abs(py - oy);
-            int dx = Math.abs(px - ox);
-            steps += Math.max(dy, dx);
+            val dy = Math.abs(py - oy)
+            val dx = Math.abs(px - ox)
+            steps += Math.max(dy, dx)
 
-            ox = px;
-            oy = py;
+            ox = px
+            oy = py
         }
 
-        return steps;
+        return steps
     }
 
 
